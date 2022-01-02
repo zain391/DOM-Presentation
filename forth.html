@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-4</title>
+</head>
+<body>
+    <img src="" alt="light bulb">  
+    <!-- <button>on</button>
+    <button>off</button> -->
+    <button onclick="on()">on</button>
+    <button onclick="off()">off</button>
+    <script>
+        let image=document.getElementsByTagName("img");
+        console.log(image[0]);
+        image[0].src="./off.png"
+      function on(){
+          let image=document.getElementsByTagName("img");
+          image[0].src="./on.png"
+      }
+      function off(){
+          let image=document.getElementsByTagName("img");
+          image[0].src="./off.png"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-7</title>
+</head>
+<body>
+    <input type="text" id="input1"> 
+    <div id="container">
+
+    </div>  
+    <h1 id="head">i am heading 1</h1>
+    <script>
+
+        let input=document.getElementById("input1");
+        input.addEventListener("change",function(){
+                let container=document.getElementById("container");
+                let h1=document.createElement("h1");
+                h1.innerHTML=input.value;
+                container.appendChild(h1);
+                console.log(h1);
+            })
+        let head=document.getElementById("head");
+        head.addEventListener("mouseenter",function(){
+        head.innerHTML="you have triggered the mouseenter event"
+        head.style.backgroundColor="red";
+    });
+    head.addEventListener("mouseleave",function(){
+        head.innerHTML="you have triggered the mouseleave event in scripts"
+        head.style.backgroundColor="green";
+    });
+
+
+    </script>
+</body>
+</html>
